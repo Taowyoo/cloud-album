@@ -29,7 +29,7 @@ func GetExifData(r io.Reader) (map[string]string, error) {
 	// Get GPS info
 	lat, long, _ := x.LatLong()
 	if err == nil {
-		ret[string("Location")] = fmt.Sprintf("(%v°N,%v°E)", lat, long)
+		ret[string("Location")] = fmt.Sprintf("(%v N,%v E)", lat, long)
 	} else {
 		ret[string("Location")] = emptyString
 	}
